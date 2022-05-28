@@ -79,6 +79,11 @@ RUN apt-get install -y libarchive-zip-perl \
 
 RUN apt-get install -y latexml
 
+# fails on "from . import ft2font" which indicates a dependence on Visual Studio C++
+# https://github.com/matplotlib/matplotlib/issues/14558#issuecomment-502769057
+#RUN python3.9 -m pip install msvc-runtime
+# https://pypi.org/project/msvc-runtime/
+
 RUN perl Makefile.PL
 RUN make
 RUN make test
