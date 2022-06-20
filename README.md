@@ -33,6 +33,10 @@ Post-processing complete: No obvious problems
 Status:conversion:0
 ```
 
+Here's what `out.html` looks like in Firefox:
+
+![Firefox](https://github.com/allofphysicsgraph/containerized-miogatto-annotation/blob/master/html_output.png?raw=true)
+
 The next step is to run `python -m tools.preprocess /scratch/out.html` which relies on content in `/opt/MioGatto`
 ```bash
 export PYTHONPATH="$PYTHONPATH:/opt/MioGatto"
